@@ -1,17 +1,21 @@
-function validar() {
-    var user = document.getElementById("usuario").value;
-    var password = document.getElementById("pasaporte");
-    if (user = usuario) {
-        textContent = "El usuario existe"
-    }
-}
+const Users = [
+    {user: "Pikachu", password:"pikachu1234"},
+    {user: "Bulbasaur", password:"bulbasaur1234"}
+];
 
-var lista = document.getElementById("lista-dinamica");
-const products = ["Rosas","Tulipanes","Claveles","Gerbera","Orquideas","Lilis","Alcatraces"]
-for (let i = 0; i < listaProducto.length; i++) {
-    const element = listaProducto
-    [i];
-    var li = document.createElement("li");
-    li.textContent = element;
-    lista.appendChild(li);
+function validarLogin() {
+    var usuario = document.getElementById("usuario").value;
+    let contraseña = document.getElementById("contraseña").value;
+
+    if (usuario=="" || contraseña=="") {
+        alert("los campos son obligatorios...por favor digite los campos ")
+    }else{
+        if (usuario==Users.user.value && contraseña == Users.password.value) {
+            window.location.href ="pagina2.html"
+            
+        }else{
+            alert ("lo siento no estas en la base de datos ");
+        }
+    }
+    
 }
